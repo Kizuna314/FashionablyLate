@@ -14,14 +14,12 @@
 
 3. コンテナに入る
     ```bash
-    docker-compose exec app bash
+    docker-compose exec php bash
     ```
 
 4. パッケージをインストール
     ```bash
     composer install
-    npm install
-    npm run dev
     ```
 
 5. 環境ファイルを設定
@@ -29,6 +27,7 @@
     cp .env.example .env
     php artisan key:generate
     ```
+    ※環境変数を変更
 
 6. データベースのマイグレーションとシーディング
     ```bash
@@ -36,6 +35,10 @@
     ```
 
 ## 使用技術(実行環境)
+・php:7.4.9
+・nginx:1.21.1
+・Laravel:8.75
+・MySQL:8.0.26
 
 
 ## ER図
