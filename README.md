@@ -42,7 +42,8 @@
 
 
 ## ER図
-< - - - 作成したER図の画像 - - - >
+<img width="645" alt="スクリーンショット 2024-07-16 11 59 06" src="https://github.com/user-attachments/assets/ad70f65c-da6d-4e10-983e-8a0dc0e9389f">
+
 
 ## URL
 ・開発環境：http://localhost/
