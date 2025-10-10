@@ -6,12 +6,17 @@ use App\Models\Contact;
 use App\Models\Category;
 use App\Http\Requests\ContactRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class ContactController extends Controller
 {
     public function index(Request $request)
     {
-        $categories = Category::all();
+        // Cache categories for 1 hour (3600 seconds)
+        $categories = Cache::remember('categories', 3600, function () {
+            return Category::all();
+        });
+        
         return view('contact.index', compact('categories'));
     }
 
