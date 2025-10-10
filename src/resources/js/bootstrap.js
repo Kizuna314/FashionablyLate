@@ -1,4 +1,7 @@
-window._ = require('lodash');
+// Only import specific lodash functions that are actually used
+// This reduces bundle size significantly
+import { debounce, throttle } from 'lodash';
+window._ = { debounce, throttle };
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
